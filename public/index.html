@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Charlie Meyer</title>
+    </head>
+    <body>
+        <button onclick="toggleAbout()"><h1>Charlie Meyer</h1></button>
+        <hr>
+        <img id="img" src="./charlieMeyer.jpeg">
+        <p id="about"></p>
+    </body>
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+        }
+        button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        .about {
+            display: none;
+        }
+    </style>
+    <script>
+        let toggle = false;
+        const img = document.getElementById("img");
+        const about = document.getElementById("about");
+
+        function toggleAbout() {
+            toggle = !toggle;
+
+            if (toggle) {
+                img.style.display = "none";
+                about.style.display = "block";
+                about.textContent = "This is information about Charlie Meyer.";
+            } else {
+                img.style.display = "block";
+                about.style.display = "none";
+            }
+        }
+    </script>
+</html>
